@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Mensagens pro meu amor</title>
+  </head>
+  <body
+    class="h-screen bg-zinc-50 dark:bg-black flex flex-col items-center justify-center text-zinc-50 mx-auto"
+  >
+    <h1 class="text-red-500 text-2xl">
+      "N" maneiras de dizer que <strong>Eu te amo</strong>
+      <i class="bx bx-heart bx-burst text-red-500"></i>
+    </h1>
+    <button
+      id="gerarMensagem"
+      class="bg-red-200 text-xl text-black rounded p-2 mt-3 border-2 border-red-200 hover:bg-transparent hover:border-2 hover:border-red-500 hover:text-white transition-all duration-300"
+    >
+      aperte e veja meu amor por você
+    </button>
+    <div class="mt-3 max-w-72" id="areaMensagem"></div>
+
+    <script>
+      const mensagens = [
+        "Eu te amo minha princesa, mais que tudo nessa vida, espero que tenha um ótimo dia!",
+        "Você tá linda hoje, aliás, você é linda todos os dias da sua vida.",
+        "Sou apaixonado na sua beleza, você fica mais linda a cada dia que passa.",
+        "Obrigado por ser uma pessoa tão incrível na minha vida, todo mundo ao seu redor ama estar com você, sua companhia melhora o ambiente em 1000000%.",
+        "Nunca desista dos seus sonhos love, vou tá sempre aqui apoiando você",
+        "Levante, mantenha a cabeça erguida e faz o que tem que fazer no seu dia, tenho certeza que vai dar seu melhor love. Eu te amo!",
+        "Mais um dia que você acorda e mais um dia sendo a razão de eu acordar feliz todos os dias.",
+        "Seu namorado é lindo né, ele te ama demais viuuuuuuuuuu.",
+        "Sou o homem mais sortudo do mundo por ter você ao meu lado, obrigado por compartilhar sua vida comigo. Me esforço todos os dias pra ser um bom namorado.",
+        "Conte sempre comigo para o que der e vier, já disse que vou tá ao seu lado até o fim de nossas vidas.",
+        "Não sei se eu já disse que você tá linda hoje, provavelmente né, mas HOJE VOCÊ TÁ LINDA MINHA PRINCESA.",
+        "Não esqueça que meu desejo por você nunca vai acabar, meu tesão por você é infinito",
+        "Juro que fico impressionado no tesão que você me dá, tu fode comigo de todas as maneiras possíveis meu amor.",
+        "Provavelmente a gente tá longe um do outro agora, mas tenha certeza que nesse momento eu tô pensando em você e to morrendo de saudades.",
+        "Faria de tudo pra tá com você agora meu amor, você é e sempre será minha melhor companhia.",
+        'Não importa quantas vezes eu fale "eu te amo", segundos depois meu amor por você já vai ter triplicado. Eu SEMPRE vou te amar da mesma forma de sempre.',
+        "Você não tem noção de como você é uma luz na minha vida, que me faz bem todos os dias e sempre tá comigo quando preciso. Você é incrível em todos os sentidos minha princesa.",
+        "Obrigado por existir na minha vida e por ser essa pessoa que eu admiro mais a cada dia. NUNCA vou me cansar de dizer o quanto que eu te amo, o quanto que tu é perfeita e como faz eu me apaixonar mais por você a cada dia que passa.",
+        "Não tenho palavras pra descrever a imensidão do meu amor por você, princesa. Queria que você pudesse ver com meus olhos como eu te vejo, pra você ver a Deusa que você é e o quão perfeita tu consegue ser.",
+      ]
+
+      function gerarMensagem() {
+        const indice = Math.floor(Math.random() * mensagens.length)
+        return mensagens[indice]
+      }
+
+      document
+        .getElementById("gerarMensagem")
+        .addEventListener("click", function () {
+          const msg = gerarMensagem()
+          document.getElementById("areaMensagem").innerText = msg
+        })
+    </script>
+  </body>
+</html>
