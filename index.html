@@ -9,6 +9,20 @@
       rel="stylesheet"
     />
     <title>Mensagens pro meu amor</title>
+    <style>
+      @keyframes aparecer {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      #areaMensagem.show {
+        animation: aparecer 0.7s ease-in-out;
+      }
+    </style>
   </head>
   <body
     class="h-screen bg-red-900 flex flex-col items-center justify-center text-zinc-50 mx-auto"
@@ -59,6 +73,10 @@
         .addEventListener("click", function () {
           const msg = gerarMensagem()
           document.getElementById("areaMensagem").innerText = msg
+          document.getElementById("areaMensagem").classList.add("show")
+          setTimeout(() => {
+            document.getElementById("areaMensagem").classList.remove("show"); // vai remover a animação depois q aparecer pra quando clicar novamente, ter a animação
+          }, 500);
         })
     </script>
   </body>
